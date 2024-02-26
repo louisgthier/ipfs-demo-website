@@ -10,9 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: popovoleksandr/ipfs-pinata-deploy-action@v1
+      - uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
         with:
-          pinata_api_key: ${{ secrets.PINATA_API_KEY }}
-          pinata_secret_api_key: ${{ secrets.PINATA_SECRET_API_KEY }}
-          host_directory: './src'
-          pinata_metadata: '{"name": "IPFS Demo Website"}'
+          pinata-api-key: ${{ secrets.PINATA_API_KEY }}
+          pinata-secret-api-key: ${{ secrets.PINATA_SECRET_API_KEY }}
+          path: './src'
+          verbose: true
+          pin-name: 'IPFS Demo Website'
+          remove-old: true

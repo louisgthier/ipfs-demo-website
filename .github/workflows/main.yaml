@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
+      - uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.3
         with:
           pinata-api-key: ${{ secrets.PINATA_API_KEY }}
           pinata-secret-api-key: ${{ secrets.PINATA_SECRET_API_KEY }}
